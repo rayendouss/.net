@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Pidev.data.tp_jsf_timesheet>
+
+@{
+    ViewBag.Title = "ListTime";
+    Layout = "~/Views/Shared/Employes.cshtml";
+}
+
+<h2>ListTimeSheet</h2>
+
+<p>
+  
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EtatTache)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbreConge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbreHeureTRavJour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbreHeureTRavS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.etat)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EtatTache)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NbreConge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NbreHeureTRavJour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NbreHeureTRavS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.etat)
+        </td>
+        <td>
+            @Html.ActionLink("Voir Projet", "ListProjet", new { id = item.idpfk }) |
+        <td>
+
+    </tr>
+}
+
+</table>

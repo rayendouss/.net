@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Pidev.data.tp_jsf_tache>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employes_id)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.timesheets_idT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.desct)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employes_id)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.timesheets_idT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idt }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idt }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idt })
+        </td>
+    </tr>
+}
+
+</table>

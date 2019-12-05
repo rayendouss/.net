@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Pidev.data.tp_jsf_timesheet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<a href="@Url.Action("Create","tp_jsf_timesheet")" class="btn btn-primary btn-icon-split">
+    <span class="icon text-white-50">
+        <i class="fas fa-flag"></i>
+    </span>
+    <span class="text">Ajouter timesheets</span>
+</a>
+
+<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+    <div class="input-group">
+        <input id="Search" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button">
+                <i class="fas fa-search fa-sm"></i>
+            </button>
+        </div>
+    </div>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EtatTache)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbreConge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbreHeureTRavJour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbreHeureTRavS)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.etat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idEmploye)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idpfk)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr class="Search">
+        <td>
+            @Html.DisplayFor(modelItem => item.EtatTache)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NbreConge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NbreHeureTRavJour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NbreHeureTRavS)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.etat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idEmploye)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idpfk)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.idT }) |
+
+            @Html.ActionLink("Delete", "Delete", new { id = item.idT })
+        </td>
+    </tr>
+
+    }
+
+
+</table>
+<a href="ImportExcel" class="btn btn-info btn-icon-split">
+    <span class="icon text-white-50">
+        <i class="fas fa-info-circle"></i>
+    </span>
+    <span class="text">Telecharger Excel</span>
+</a>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function Contains(text_one, text_two) {
+            if (text_one.indexOf(text_two) != -1)
+                return true;
+        }
+        $("#Search").keyup(function () {
+            var searchText = $("#Search").val().toLowerCase();
+            $(".Search").each(function () {
+                if (!Contains($(this).text().toLowerCase(), searchText)) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>

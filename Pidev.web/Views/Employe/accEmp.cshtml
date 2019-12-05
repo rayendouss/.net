@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Pidev.data.tp_jsf_employe>
+
+@{
+    ViewBag.Title = "accEmp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>accEmp</h2>
+
+<p>
+    @Html.ActionLink("Create ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isActif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.role)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in ViewBag.result)
+    {
+        <tr>
+            <td>
+                @item.email
+            </td>
+            <td>
+                @item.isActif
+            </td>
+            <td>
+                @item.nom
+            </td>
+            <td>
+                @item.password
+            </td>
+            <td>
+                @item.prenom
+            </td>
+            <td>
+                @item.role
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pidev.console", "Pidev\Pidev.console.csproj", "{EEA28DE2-71DD-4CEC-9BED-C892E687AE80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pidev.data", "Pidev.data\Pidev.data.csproj", "{BD0C1C1B-3D5F-4713-87DC-3E89F255620A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pidev.domain", "Pidev.domain\Pidev.domain.csproj", "{FB1DBB19-502D-4650-8240-5F263B379D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pidev.service", "Pidev.service\Pidev.service.csproj", "{06BB6CE8-8DAD-4788-BDA3-467D0941B02C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pidev.servicePattern", "Pidev.servicePatterh\Pidev.servicePattern.csproj", "{771F7397-4CA2-42E7-B184-04EB71830502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pidev.web", "Pidev.web\Pidev.web.csproj", "{EA3F7AFB-A2BF-403C-BAA2-348DF3FE3071}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEA28DE2-71DD-4CEC-9BED-C892E687AE80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA28DE2-71DD-4CEC-9BED-C892E687AE80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA28DE2-71DD-4CEC-9BED-C892E687AE80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA28DE2-71DD-4CEC-9BED-C892E687AE80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0C1C1B-3D5F-4713-87DC-3E89F255620A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD0C1C1B-3D5F-4713-87DC-3E89F255620A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD0C1C1B-3D5F-4713-87DC-3E89F255620A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD0C1C1B-3D5F-4713-87DC-3E89F255620A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB1DBB19-502D-4650-8240-5F263B379D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1DBB19-502D-4650-8240-5F263B379D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1DBB19-502D-4650-8240-5F263B379D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1DBB19-502D-4650-8240-5F263B379D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06BB6CE8-8DAD-4788-BDA3-467D0941B02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BB6CE8-8DAD-4788-BDA3-467D0941B02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BB6CE8-8DAD-4788-BDA3-467D0941B02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BB6CE8-8DAD-4788-BDA3-467D0941B02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771F7397-4CA2-42E7-B184-04EB71830502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771F7397-4CA2-42E7-B184-04EB71830502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771F7397-4CA2-42E7-B184-04EB71830502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771F7397-4CA2-42E7-B184-04EB71830502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3F7AFB-A2BF-403C-BAA2-348DF3FE3071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3F7AFB-A2BF-403C-BAA2-348DF3FE3071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3F7AFB-A2BF-403C-BAA2-348DF3FE3071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3F7AFB-A2BF-403C-BAA2-348DF3FE3071}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3116271E-902A-4920-B719-A9B3AFED08DF}
+	EndGlobalSection
+EndGlobal

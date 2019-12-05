@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Pidev.data.tp_jsf_project>
+
+@{
+    ViewBag.Title = "ListProjet";
+    Layout = "~/Views/Shared/Employes.cshtml";
+}
+
+<h2>ListProjet</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.endDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.startDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.endDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.startDate)
+        </td>
+        <td>
+            @Html.ActionLink("Voir Taches", "ListTache", new { id = item.idp}) |
+        </td>
+    </tr>
+}
+
+</table>

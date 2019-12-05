@@ -1,0 +1,81 @@
+﻿@model Pidev.data.tp_jsf_timesheet
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tp_jsf_timesheet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EtatTache)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EtatTache)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NbreConge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NbreConge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NbreHeureTRavJour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NbreHeureTRavJour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NbreHeureTRavS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NbreHeureTRavS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmploye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idpfk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idpfk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.etat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.etat)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
